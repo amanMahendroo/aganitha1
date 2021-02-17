@@ -75,3 +75,36 @@ a {
 .article:hover .over {
 	background: linear-gradient(to right, transparent, #000);
 }
+
+@media screen and (max-width: 1200px) {
+	.container {
+		position: absolute;
+
+	}
+
+	.article {
+		display: block;
+		width: calc(100vw - 40px);
+		height: 200px;
+		margin: 20px;
+	}
+
+	.article img, .article .over {
+		position: absolute;
+		height: 200px;
+		width: 300px;
+		left: 0;
+	}
+
+	.article .src, .article .date {
+		right: calc(100vw - 330px);
+	}
+
+	.article .content {
+		position: absolute;
+		top: 0;
+		width: calc(100% - 310px);
+		left: 300px;
+		font-size: 2em;
+	}
+}

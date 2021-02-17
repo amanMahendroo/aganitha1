@@ -5,7 +5,7 @@ const router = express.Router()
 // @desc    Home
 // @route   GET /
 
-const url = 'https://newsapi.org/v2/top-headlines?country=us&sortBy=date&apiKey=f9373d8d7bbb419c8cc4c53d3ff89cd2'
+const url = 'https://newsapi.org/v2/top-headlines?country=us&sortBy=date&apiKey=' + process.env.KEY
 const settings = { method: "Get" }
 
 router.get('/', async (req, res) => {
