@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="css/home.css">
+
+{{#if articles}}
+<div class="container">
+{{#each articles}}
+<a href={{url}}>
+	<div class="article">
+		{{#if urlToImage}}
+		<img src={{urlToImage}} />
+		{{/if}}
+		<div class="over"></div>
+		<p class="src">{{source.name}}</p>
+		<p class="date">{{formatDate publishedAt 'MMMM Do YYYY, h:mm a'}}</p>
+		<div class="content">
+			<h1>{{title}}</h1>
+		</div>
+	</div>
+</a>
+{{/each}}
+</div>
+{{else}}
+<p>There are no articles</p>
+{{/if}}
